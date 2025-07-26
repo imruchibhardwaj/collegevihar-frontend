@@ -12,15 +12,23 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/online/{slug}', [App\Http\Controllers\OnlineLandingController::class, 'show'])->name('online.landing');
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/manipal', function () {
-    return view('manipal');
+    return view('Landing-pages.manipal');
 });
 
 Route::get('/sikkim', function () {
-    return view('sikkim');
+    return view('Landing-pages.sikkim');
 });
+Route::get('/gla', function () {
+    return view('Landing-pages.gla');
+});
+Route::get('/lpu', function () {
+    return view('Landing-pages.lpu');
+});
+
