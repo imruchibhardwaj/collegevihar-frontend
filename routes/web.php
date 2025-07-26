@@ -31,4 +31,7 @@ Route::get('/gla', function () {
 Route::get('/lpu', function () {
     return view('Landing-pages.lpu');
 });
+Route::get('/amity', function () {
+    return view('Landing-pages.amity');
+});
 
